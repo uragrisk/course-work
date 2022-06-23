@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feeder</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <div class="min-vw-100 min-vh-100 bg-image p-5 text-brown">
+        <div class="info d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 text-center">
+                        <h2 class="m-5">Automatic feeder for animals</h2>
+                        <h5 class="m-4">
+                            Adjust the feeding times of your pet
+                        </h5>
+                        <select id="form-select" class="form-select" aria-label="Default select example">
+                            <option selected>Number of meals per day</option>
+                            <option id="selected1" value="1">One</option>
+                            <option id="selected2" value="2">Two</option>
+                            <option id="selected3" value="3">Three</option>
+                            <option id="selected4" value="4">Four</option>
+                        </select>
+                        <div>
+                            <div id="firstTime" class="my-5" style="display: none;">
+                                <h4 class="m-4 ">Choose first time</h2>
+                                    <input id="firstTimeInput" cla style="max-height: 40px;" type="time" id="appt"
+                                        name="appt" min="09:00" max="18:00" required>
+                            </div>
+                            <div id="secondTime" class="my-5" style="display: none;">
+                                <h5 class="m-4">Choose second time</h2>
+                                    <input id="secondTimeInput" style="max-height: 60px;" type="time" id="appt"
+                                        name="appt" min="09:00" max="18:00" required>
+                            </div>
+                            <div id="thirdTime" class=" my-5" style="display: none;">
+                                <h5 class="m-4">Choose third time</h2>
+                                    <input id="thirdTimeInput" style="max-height: 60px;" type="time" id="appt"
+                                        name="appt" min="09:00" max="18:00" required>
+                            </div>
+                            <div id="fourthTime" class="my-5" style="display:none;">
+                                <h5 class="m-4">Choose fourth time</h2>
+                                    <input id="fourthTimeInput" style="max-height: 60px;" type="time" id="appt"
+                                        name="appt" min="09:00" max="18:00" required>
+                            </div>
+                        </div>
+                        <div class="my-5">
+                            <button id="confirm-button" class="btn btn-success mx-2">Confirm</button>
+                            <button id="discard-button" class="btn btn-danger mx-2">Discard meals</button>
+                            <button id="feed-button" class="btn btn-warning mx-2">Feed now</button>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button id="history-button" type="button" class="btn btn-outline-secondary btn-sm"
+                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                Feeding history</button>
+                        </div>
+                        <div class="my-5" id="table_section" style="display: none;" >
+                            <table class="table" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Portion size</th>
+                                        <th scope="col">Name of feed</th>
+                                        <th scope="col">Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
